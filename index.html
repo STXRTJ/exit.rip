@@ -10,7 +10,7 @@
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
-            cursor: url('assets/Cursor.cur'), auto;
+            cursor: url('Assets/Cursor.cur'), auto;
             user-select: none;
         }
 
@@ -392,7 +392,7 @@
 
     <div class="volume-controller" id="volume-controller">
         <div class="volume-button" id="volume-button">
-            <img id="volume-icon" src="assets/Volume_on.png" alt="Volume">
+            <img id="volume-icon" src="Assets/Volume_on.png" alt="Volume">
         </div>
         <input type="range" min="0" max="100" value="50" class="volume-slider" id="volume-slider">
     </div>
@@ -404,7 +404,7 @@
     <div class="content" id="content">
         <div class="profile-container" id="profile-container">
             <div class="avatar-container">
-                <img src="assets/Avatar.png" alt="Avatar" class="avatar">
+                <img src="Assets/Avatar.png" alt="Avatar" class="avatar">
             </div>
             <div class="username">
                 STXRTJ
@@ -413,7 +413,7 @@
 
             <div class="badges-container">
                 <div class="badge" title="Owner">
-                    <img src="assets/Crown.png" alt="">
+                    <img src="Assets/Crown.png" alt="">
                     <div class="badge-name">Owner</div>
                 </div>
             </div>
@@ -426,21 +426,21 @@
 
             <div class="social-icons">
                 <div class="icon">
-                    <img src="assets/Angle_Wing_Right.png" alt="">
+                    <img src="Assets/Angle_Wing_Right.png" alt="">
                 </div>
                 <div class="icon" onclick="window.open('https://steamcommunity.com');">
-                    <img src="assets/Steam.gif" alt="">
+                    <img src="Assets/Steam.gif" alt="">
                     <div class="social-name">Steam</div>
                 </div>
                 <div class="icon">
-                    <img src="assets/Angle_Wing_Left.png" alt="">
+                    <img src="Assets/Angle_Wing_Left.png" alt="">
                 </div>
             </div>
         </div>
     </div>
 
     <div class="download-button" id="download-button">
-        <img src="assets/Download.gif" alt="Download">
+        <img src="Assets/Download.gif" alt="Download">
     </div>
 
     <script>
@@ -502,11 +502,11 @@
                     if (isMuted) {
                         previousVolume = volumeSlider.value;
                         video.volume = 0;
-                        volumeIcon.src = 'assets/Volume_off.png';
+                        volumeIcon.src = 'Assets/Volume_off.png';
                         volumeSlider.value = 0;
                     } else {
                         video.volume = previousVolume / 100;
-                        volumeIcon.src = 'assets/Volume_on.png';
+                        volumeIcon.src = 'Assets/Volume_on.png';
                         volumeSlider.value = previousVolume;
                     }
                 });
@@ -518,10 +518,10 @@
                     if (volume > 0) {
                         isMuted = false;
                         video.muted = false;
-                        volumeIcon.src = 'assets/Volume_on.png';
+                        volumeIcon.src = 'Assets/Volume_on.png';
                     } else {
                         isMuted = true;
-                        volumeIcon.src = 'assets/Volume_off.png';
+                        volumeIcon.src = 'Assets/Volume_off.png';
                     }
                 });
 
@@ -586,7 +586,7 @@
                 downloadButton.addEventListener('click', function() {
                     const link = document.createElement('a');
                     link.href = 'Exit Clicker.exe';
-                    link.download = 'assets/Exit Clicker.exe';
+                    link.download = 'Assets/Exit Clicker.exe';
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
@@ -597,4 +597,5 @@
         });
     </script>
 </body>
+
 </html>
